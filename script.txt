@@ -1,7 +1,7 @@
 CREATE TABLE Albuns (
     Id_Album VARCHAR2(18) PRIMARY KEY NOT NULL,
     Nome VARCHAR2(50) NOT NULL,
-    DataLancamento DEFAULT SYSDATE NOT NULL
+    DataLancamento DATE DEFAULT SYSDATE NOT NULL
 );
 
 CREATE TABLE Usuarios (
@@ -12,9 +12,9 @@ CREATE TABLE Usuarios (
 CREATE TABLE Seguindo_Seguidores (
     Id_Seguidor VARCHAR2(18) NOT NULL,
     Id_Seguindo VARCHAR2(18) NOT NULL,
-    ADD CONSTRAINT PK_Seguidores PRIMARY KEY (IdSeguidor, IdSeguindo),
-    ADD CONSTRAINT FK_Seguindo FOREIGN KEY (IdSeguidor) REFERENCES Usuarios(IdUsuario),
-    ADD CONSTRAINT FK_Seguidor FOREIGN KEY (IdSeguindo) REFERENCES Usuarios(IdUsuario)
+    ADD CONSTRAINT PK_Seguidores PRIMARY KEY (Id_Seguidor, Id_Seguindo),
+    ADD CONSTRAINT FK_Seguindo FOREIGN KEY (IdSeguidor) REFERENCES Usuarios(Id_Usuario),
+    ADD CONSTRAINT FK_Seguidor FOREIGN KEY (IdSeguindo) REFERENCES Usuarios(Id_Usuario)
 );
 
 CREATE TABLE Artistas (
@@ -29,8 +29,8 @@ CREATE TABLE Musicas (
     Duracao INT NOT NULL,
     VezesReproduzida INT,
     IdAlbum VARCHAR2(18),
-    DataLancamento DEFAULT SYSDATE NOT NULL,
-    ADD CONSTRAINT FK_Album_Musica FOREIGN KEY (IdAlbum) REFERENCES Albuns(IdUsuario)
+    DataLancamento DATE DEFAULT SYSDATE NOT NULL,
+    ADD CONSTRAINT FK_Album_Musica FOREIGN KEY (Id_Album) REFERENCES Albuns(Id_Usuario)
 );
 
 CREATE TABLE Musicas_Artistas (
