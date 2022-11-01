@@ -1,0 +1,74 @@
+CREATE TABLE Albuns (
+    Id_Album VARCHAR2(18) PRIMARY KEY NOT NULL,
+    Nome VARCHAR2(50) NOT NULL,
+    DataLancamento DEFAULT SYSDATE NOT NULL
+);
+
+CREATE TABLE Usuarios (
+    Id_Usuario VARCHAR2(18) PRIMARY KEY NOT NULL,
+    Nome VARCHAR2(50) NOT NULL
+);
+
+CREATE TABLE Seguindo_Seguidores (
+    Id_Seguidor VARCHAR2(18) NOT NULL,
+    Id_Seguindo VARCHAR2(18) NOT NULL,
+    ADD CONSTRAINT PK_Seguidores PRIMARY KEY (IdSeguidor, IdSeguindo),
+    ADD CONSTRAINT FK_Seguindo FOREIGN KEY (IdSeguidor) REFERENCES Usuarios(IdUsuario),
+    ADD CONSTRAINT FK_Seguidor FOREIGN KEY (IdSeguindo) REFERENCES Usuarios(IdUsuario)
+);
+
+CREATE TABLE Artistas (
+    Id_Artista VARCHAR2(18) PRIMARY KEY NOT NULL,
+    Nome VARCHAR2(50) NOT NULL
+):
+
+CREATE TABLE Musicas (
+    Id_Musica VARCHAR2(18) PRIMARY KEY NOT NULL,
+    Nome VARCHAR2(18) NOT NULL,
+    Genero VARCHAR2(50) NOT NULL,
+    Duracao INT NOT NULL,
+    VezesReproduzida INT,
+    IdAlbum VARCHAR2(18),
+    DataLancamento DEFAULT SYSDATE NOT NULL,
+    ADD CONSTRAINT FK_Album_Musica FOREIGN KEY (IdAlbum) REFERENCES Albuns(IdUsuario)
+);
+
+CREATE TABLE Musicas_Artistas (
+    Id_Musica VARCHAR2(18) NOT NULL,
+    Id_Artista VARCHAR2(18) NOT NULL,
+    ADD CONSTRAINT PK_Musicas_Artistas PRIMARY KEY (Id_Musica, Id_Artista),
+    ADD CONSTRAINT FK_Musica_Artista FOREIGN KEY (Id_Musica) REFERENCES Musicas(Id_Musica),
+    ADD CONSTRAINT FK_Artista_Musica FOREIGN KEY (Id_Artista) REFERENCES Artistas(Id_Artista)
+);
+
+CREATE TABLE Playlists (
+    Id_Playlist VARCHAR2(18) PRIMARY KEY NOT NULL,
+    Id_Usuario VARCHAR(18) NOT NULL,
+    Id_Publica BOOLEAN,
+    ADD CONSTRAINT FK_Artista FOREIGN KEY (Id_Artista) REFERENCES Artistas(Id_Artistas)
+);
+
+CREATE TABLE Playlists_Seguidores (
+    Id_Playlist VARCHAR2(18) PRIMARY KEY NOT NULL,
+    Id_Usuario VARCHAR2(18) NOT NULL,
+    ADD CONSTRAINT PK_Playlists_Seguidores PRIMARY KEY (Id_Playlist, Id_Usuario),
+    ADD CONSTRAINT FK_Id_Playlist FOREIGN KEY (Id_Playlist) REFERENCES Playlists(Id_Playlist),
+    ADD CONSTRAINT FK_Autor_Playlist FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario)
+);
+
+CREATE TABLE Playlists_Musicas (
+    Id_Playlist VARCHAR2(18) NOT NULL,
+    Id_Musica VARCHAR2(18) NOT NULL,
+    ADD CONSTRAINT PK_Playlists_Musicas PRIMARY KEY (Id_Playlist, Id_Musica),
+    ADD CONSTRAINT FK_Musica_Playlist FOREIGN KEY (Id_Musica) REFERENCES Musicas(Id_Musica),
+    ADD CONSTRAINT FK_Playlist_Musica FOREIGN KEY (Id_Playlist) REFERENCES Playlists(Id_Playlist)
+);
+
+CREATE TABLE Usuarios_Playlists (
+    Id_Usuario VARCHAR2(18) NOT NULL,
+    Id_Playlist VARCHAR2(18) NOT NULL,
+    Colaborador BOOLEAN,
+    ADD CONSTRAINT PK_Usuario_Playlist PRIMARY KEY (Id_Usuario, Id_Playlist),
+    ADD CONSTRAINT FK_Usuario_Playlist FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario),
+    ADD CONSTRAINT FK_Playlist_Usuario FOREIGN KEY (Id_Playlist) REFERENCES Playlists(Id_Playlist)
+);
