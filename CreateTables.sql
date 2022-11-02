@@ -73,3 +73,12 @@ CREATE TABLE Usuarios_Playlists (
     CONSTRAINT FK_Usuario_Playlist_Vinculo FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario),
     CONSTRAINT FK_Playlist_Usuario_Vinculo FOREIGN KEY (Id_Playlist) REFERENCES Playlists(Id_Playlist)
 );
+
+CREATE TABLE Artistas_Seguidores (
+    Id_Usuario VARCHAR2(18) NOT NULL,
+    Id_Artista VARCHAR2(18) NOT NULL,
+    CONSTRAINT PK_Artistas_Seguidores PRIMARY KEY (Id_Usuario, Id_Artista),
+    CONSTRAINT FK_Seguindo_Artista FOREIGN KEY (Id_Artista) REFERENCES Artistas(Id_Artista),
+    CONSTRAINT FK_Usuario_Seguindo_Artista FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario)
+);
+
