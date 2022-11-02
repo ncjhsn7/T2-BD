@@ -11,7 +11,6 @@ INSERT INTO Artistas VALUES ('21Savage-01', '21 Savage');
 INSERT INTO Artistas VALUES ('Quavo-01', 'Quavo');
 INSERT INTO Artistas VALUES ('LiamPayne-01', 'Liam Payne');
 
-
 INSERT INTO Usuarios VALUES ('ncjhsn', 'Nicolas Pietro');
 INSERT INTO Usuarios VALUES ('cassiusito', 'Cassius DelAvila');
 INSERT INTO Usuarios VALUES ('tashandoq', 'Lucas Tashan');
@@ -22,4 +21,3 @@ INSERT INTO Usuarios VALUES ('user#2', 'User#2');
 INSERT INTO Usuarios VALUES ('user#3', 'User#3');
 INSERT INTO Usuarios VALUES ('user#4', 'User#4');
 INSERT INTO Usuarios VALUES ('user#5', 'User#5');
-
