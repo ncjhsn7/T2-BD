@@ -21,17 +21,26 @@ INSERT INTO Albuns VALUES ('CULTUREIII', 'Culture III', TO_DATE('2020-10-10','YY
 INSERT INTO Albuns VALUES ('LP1', 'LP1', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Albuns VALUES ('MORELIFE', 'More Life', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Albuns VALUES ('DOGGYSTYLE', 'Doggystyle', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Albuns VALUES ('BTS', 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
 
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#1', 'Eletronica', 120, 6324, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#2', 'Eletronica', 120, 24, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#3', 'Eletronica', 120, 31, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#4', 'Eletronica', 120, 1237, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#5', 'Eletronica', 120, 3123, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#6', 'Eletronica', 120, 2364, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#7', 'Eletronica', 120, 41, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#8', 'Eletronica', 120, 3146, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#9', 'Eletronica', 120, 52, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#10', 'Eletronica', 120, 234, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#1', 'Eletronica', 120, 93954, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#2', 'Musica#2', 'Eletronica', 120, 356939, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#3', 'Musica#3', 'Eletronica', 120, 356939, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#4', 'Musica#4', 'Eletronica', 120, 24252, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#5', 'Musica#5', 'Eletronica', 120, 2432432, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('BTS#1', 'Dynamite', 'KPOP', 120, 31, 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('BTS#2', 'Butter', 'KPOP', 120, 162423, 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('BTS#3', 'Bad Decisions', 'KPOP', 120, 234222, 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('DUALIPA#1', 'One Kiss', 'Pop', 120, 2352, 'FUTURENOSTALGIA', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('DUALIPA#2', 'Dont Start Now', 'Pop', 120, 234423, 'FUTURENOSTALGIA', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('DUALIPA#3', 'Levitating', 'Pop', 120, 234322, 'FUTURENOSTALGIA', TO_DATE('2020-10-10','YYYY-MM-DD'));
+
+INSERT INTO Musicas_Artistas VALUES ('BTS#1', 'BTS-01');
+INSERT INTO Musicas_Artistas VALUES ('BTS#2', 'BTS-01');
+INSERT INTO Musicas_Artistas VALUES ('BTS#3', 'BTS-01');
+INSERT INTO Musicas_Artistas VALUES ('DUALIPA#1', 'DuaLipa-01');
+INSERT INTO Musicas_Artistas VALUES ('DUALIPA#2', 'DuaLipa-01');
+INSERT INTO Musicas_Artistas VALUES ('DUALIPA#3', 'DuaLipa-01');
 
 INSERT INTO Usuarios VALUES ('ncjhsn', 'Nicolas Pietro');
 INSERT INTO Usuarios VALUES ('cassiusito', 'Cassius DelAvila');
@@ -43,3 +52,31 @@ INSERT INTO Usuarios VALUES ('user#2', 'User#2');
 INSERT INTO Usuarios VALUES ('user#3', 'User#3');
 INSERT INTO Usuarios VALUES ('user#4', 'User#4');
 INSERT INTO Usuarios VALUES ('user#5', 'User#5');
+
+INSERT INTO Playlists VALUES ('ncjhsn#1', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#2', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#3', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#4', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#5', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#6', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#7', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#8', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#9', 'ncjhsn', '1');
+INSERT INTO Playlists VALUES ('ncjhsn#10', 'ncjhsn', '1');
+
+INSERT INTO Usuarios_Playlists VALUES ('ncjhsn', 'ncjhsn#1', '0');
+INSERT INTO Usuarios_Playlists VALUES ('cdtx', 'ncjhsn#1', '1');
+
+INSERT INTO Playlists_Musicas VALUES ('ncjhsn#1', 'DUALIPA#1');
+INSERT INTO Playlists_Musicas VALUES ('ncjhsn#1', 'DUALIPA#2');
+INSERT INTO Playlists_Musicas VALUES ('ncjhsn#1', 'DUALIPA#3');
+
+INSERT INTO Playlists_Seguidores VALUES ('ncjhsn#1', 'tashandoq');
+INSERT INTO Playlists_Seguidores VALUES ('ncjhsn#1', 'cdtx');
+INSERT INTO Playlists_Seguidores VALUES ('ncjhsn#2', 'vogadok');
+
+INSERT INTO Seguindo_Seguidores VALUES ('ncjhsn', 'cassiusito');
+INSERT INTO Seguindo_Seguidores VALUES ('ncjhsn', 'cdtx');
+INSERT INTO Seguindo_Seguidores VALUES ('ncjhsn', 'vogadok');
+INSERT INTO Seguindo_Seguidores VALUES ('vogadok', 'ncjhsn');
+
