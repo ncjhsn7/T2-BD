@@ -23,17 +23,21 @@ INSERT INTO Albuns VALUES ('MORELIFE', 'More Life', TO_DATE('2020-10-10','YYYY-M
 INSERT INTO Albuns VALUES ('DOGGYSTYLE', 'Doggystyle', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Albuns VALUES ('BTS', 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
 
-INSERT INTO Musicas VALUES ('JOYTIME#1', 'Musica#1', 'Eletronica', 120, 93954, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#2', 'Musica#2', 'Eletronica', 120, 356939, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#3', 'Musica#3', 'Eletronica', 120, 356939, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#4', 'Musica#4', 'Eletronica', 120, 24252, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
-INSERT INTO Musicas VALUES ('JOYTIME#5', 'Musica#5', 'Eletronica', 120, 2432432, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#1', 'Alone', 'Eletronica', 120, 93954, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#2', 'Ritual', 'Eletronica', 120, 356939, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#3', 'Numb', 'Eletronica', 120, 356939, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('JOYTIME#4', 'Silence', 'Eletronica', 120, 24252, 'JOYTIME', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('GRDT#1', '21 Questions', 'Rap', 120, 645634, 'GRDT', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('GRDT#2', 'Many Men', 'Rap', 120, 9058021, 'GRDT', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Musicas VALUES ('BTS#1', 'Dynamite', 'KPOP', 120, 31, 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Musicas VALUES ('BTS#2', 'Butter', 'KPOP', 120, 162423, 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Musicas VALUES ('BTS#3', 'Bad Decisions', 'KPOP', 120, 234222, 'BTS', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Musicas VALUES ('DUALIPA#1', 'One Kiss', 'Pop', 120, 2352, 'FUTURENOSTALGIA', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Musicas VALUES ('DUALIPA#2', 'Dont Start Now', 'Pop', 120, 234423, 'FUTURENOSTALGIA', TO_DATE('2020-10-10','YYYY-MM-DD'));
 INSERT INTO Musicas VALUES ('DUALIPA#3', 'Levitating', 'Pop', 120, 234322, 'FUTURENOSTALGIA', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('LP#1', 'Bedroom Floor', 'Pop', 120, 8543283, 'LP1', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('LP#2', 'Strip That Down', 'Pop', 120, 8543283, 'LP1', TO_DATE('2020-10-10','YYYY-MM-DD'));
+INSERT INTO Musicas VALUES ('LP#3', 'Slow', 'Pop', 120, 8543283, 'LP1', TO_DATE('2020-10-10','YYYY-MM-DD'));
 
 INSERT INTO Musicas_Artistas VALUES ('BTS#1', 'BTS-01');
 INSERT INTO Musicas_Artistas VALUES ('BTS#2', 'BTS-01');
@@ -41,6 +45,9 @@ INSERT INTO Musicas_Artistas VALUES ('BTS#3', 'BTS-01');
 INSERT INTO Musicas_Artistas VALUES ('DUALIPA#1', 'DuaLipa-01');
 INSERT INTO Musicas_Artistas VALUES ('DUALIPA#2', 'DuaLipa-01');
 INSERT INTO Musicas_Artistas VALUES ('DUALIPA#3', 'DuaLipa-01');
+INSERT INTO Musicas_Artistas VALUES ('DUALIPA#1', 'CalvinHarris-01');
+INSERT INTO Musicas_Artistas VALUES ('JOYTIME#3', 'Khalid-01');
+INSERT INTO Musicas_Artistas VALUES ('JOYTIME#3', 'Marshmello-01');
 
 INSERT INTO Usuarios VALUES ('ncjhsn', 'Nicolas Pietro');
 INSERT INTO Usuarios VALUES ('cassiusito', 'Cassius DelAvila');
