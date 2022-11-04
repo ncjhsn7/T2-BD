@@ -5,9 +5,13 @@ O intuito do trabalho é construir um banco de dados simulando uma versão mais 
 
 # Tabelas primárias
 ## Artistas
-Utilizada para salvar os produtores de músicas. Contém as colunas `Id_Artistas` (Primary Key) e `Nome`. Sem nenhuma chave estrangeira.
+Utilizada para salvar os produtores de músicas. Contém as colunas `Id_Artistas` (PK) e `Nome`. Sem nenhuma chave estrangeira.
 
-## Usuários
+## Usuarios
+São as pessoas que utilizam a plataforma. Contém as colunas `Id_Usuario` (PK) e `Nome`. Sem nenhuma chave estrangeira.
+
+## Albuns
+Servem para fazer uma coletânea de músicas 
 
 ## Pré configuração do BD
 primeiro executar os comandos que estão no arquivo `CreateTables.sql` e depois preencher os dados das tabelas com o arquivo `LoadData.sql`.
