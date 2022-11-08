@@ -45,6 +45,8 @@ SELECT m.Nome, a.nome FROM Musicas m JOIN Albuns a ON a.Id_Album = m.Id_Album
 ```
 
 Obter somatório de reprodução de um `Album`:
+```
 SELECT SUM(vezes_reproduzida) FROM Musicas WHERE Id_Album = 'FUTURENOSTALGIA'
+```
 
 ## Nicolas Pietro, Ariel Menezes, Larissa Esteves, Nathalie de Avila
