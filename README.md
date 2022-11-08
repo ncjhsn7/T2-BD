@@ -25,7 +25,8 @@ Tabela para identificar um conjunto de músicas de um usuário. Contém as infor
 Utilizada para definir de quem é uma determinada música e une as tabelas `Musicas` e `Artistas` com as colunas `id_musica` (FK/PK) e `id_artista` (FK/PK).
 
 ## Usuarios_Playlists
-Utilizada para vincular uma playlist ao um usuário e verificar se ela é publica. Possui duas colunas como chave primária e estrangeira ao mesmo tempo da tabela `id_usuario` e `id_playlist` e uma coluna de visibilidade `publica`.
+Utilizada para vincular uma playlist ao um usuário e verificar se ele é dono, colaborador ou não possui vínculo com ela. Possui duas colunas como chave primária e estrangeira ao mesmo tempo da tabela `id_usuario` e `id_playlist` e uma coluna de colaborador/dono `colaborador`.
+Na coluna `colaborador` possui valores definidos como 0 = sem nenhum vinculo, 1 = colaborador, 2 = dono.
 
 ## Playlists_Musicas
 Utilizada para vincular músicas de uma playlist que une as tabelas `Playlists` e `Musicas` com as colunas `id_playlist` e `id_musica` (FK/PK).
