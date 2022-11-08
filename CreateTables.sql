@@ -1,84 +1,82 @@
 CREATE TABLE Albuns (
-    Id_Album VARCHAR2(18) PRIMARY KEY NOT NULL,
-    Nome VARCHAR2(50) NOT NULL,
-    DataLancamento DATE DEFAULT SYSDATE NOT NULL
+    id_album VARCHAR2(18) PRIMARY KEY NOT NULL,
+    nome VARCHAR2(50) NOT NULL,
+    data_lancamento DATE DEFAULT SYSDATE NOT NULL
 );
 
 CREATE TABLE Usuarios (
-    Id_Usuario VARCHAR2(18) PRIMARY KEY NOT NULL,
-    Nome VARCHAR2(50) NOT NULL
+    id_usuario VARCHAR2(18) PRIMARY KEY NOT NULL,
+    nome VARCHAR2(50) NOT NULL
 );
-
-CREATE TABLE Seguindo_Seguidores (
-    Id_Seguidor VARCHAR2(18) NOT NULL,
-    Id_Seguindo VARCHAR2(18) NOT NULL,
-    CONSTRAINT PK_Seguidores PRIMARY KEY (Id_Seguidor, Id_Seguindo),
-    CONSTRAINT FK_Seguindo FOREIGN KEY (Id_Seguidor) REFERENCES Usuarios(Id_Usuario),
-    CONSTRAINT FK_Seguidor FOREIGN KEY (Id_Seguindo) REFERENCES Usuarios(Id_Usuario)
-);
-
 
 CREATE TABLE Artistas (
-    Id_Artista VARCHAR2(18) PRIMARY KEY NOT NULL,
-    Nome VARCHAR2(50) NOT NULL
+    id_artista VARCHAR2(18) PRIMARY KEY NOT NULL,
+    nome VARCHAR2(50) NOT NULL
 );
 
 CREATE TABLE Musicas (
-    Id_Musica VARCHAR2(18) PRIMARY KEY NOT NULL,
-    Nome VARCHAR2(18) NOT NULL,
-    Genero VARCHAR2(50) NOT NULL,
-    Duracao INT NOT NULL,
-    VezesReproduzida INT,
-    Id_Album VARCHAR2(18),
-    DataLancamento DATE DEFAULT SYSDATE NOT NULL,
-    CONSTRAINT FK_Album_Musica FOREIGN KEY (Id_Album) REFERENCES Albuns(Id_Album)
-);
-
-CREATE TABLE Musicas_Artistas (
-    Id_Musica VARCHAR2(18) NOT NULL,
-    Id_Artista VARCHAR2(18) NOT NULL,
-    CONSTRAINT PK_Musicas_Artistas PRIMARY KEY (Id_Musica, Id_Artista),
-    CONSTRAINT FK_Musica_Artista FOREIGN KEY (Id_Musica) REFERENCES Musicas(Id_Musica),
-    CONSTRAINT FK_Artista_Musica FOREIGN KEY (Id_Artista) REFERENCES Artistas(Id_Artista)
+    id_musica VARCHAR2(18) PRIMARY KEY NOT NULL,
+    nome VARCHAR2(18) NOT NULL,
+    genero VARCHAR2(50) NOT NULL,
+    duracao INT NOT NULL,
+    vezes_reproduzida INT,
+    id_album VARCHAR2(18),
+    data_lancamento DATE DEFAULT SYSDATE NOT NULL,
+    CONSTRAINT FK_Album_Musica FOREIGN KEY (id_album) REFERENCES Albuns(id_album)
 );
 
 CREATE TABLE Playlists (
-    Id_Playlist VARCHAR2(18) PRIMARY KEY NOT NULL,
-    Id_Usuario VARCHAR2(18) NOT NULL,
-    Publica VARCHAR2(1),
-    CONSTRAINT FK_Usuario_Playlist FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario)
+    id_playlist VARCHAR2(18) PRIMARY KEY NOT NULL,
+    id_usuario VARCHAR2(18) NOT NULL,
+    publica VARCHAR2(1),
+    CONSTRAINT FK_Usuario_Playlist FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
+);
+
+CREATE TABLE Musicas_Artistas (
+    id_musica VARCHAR2(18) NOT NULL,
+    id_artista VARCHAR2(18) NOT NULL,
+    CONSTRAINT PK_Musicas_Artistas PRIMARY KEY (id_musica, id_artista),
+    CONSTRAINT FK_Musica_Artista FOREIGN KEY (id_musica) REFERENCES Musicas(id_musica),
+    CONSTRAINT FK_Artista_Musica FOREIGN KEY (id_artista) REFERENCES Artistas(id_artista)
 );
 
 CREATE TABLE Playlists_Seguidores (
-    Id_Playlist VARCHAR2(18) NOT NULL,
-    Id_Usuario VARCHAR2(18) NOT NULL,
-    CONSTRAINT PK_Playlists_Seguidores PRIMARY KEY (Id_Playlist, Id_Usuario),
-    CONSTRAINT FK_Id_Playlist FOREIGN KEY (Id_Playlist) REFERENCES Playlists(Id_Playlist),
-    CONSTRAINT FK_Autor_Playlist FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario)
+    id_playlist VARCHAR2(18) NOT NULL,
+    id_usuario VARCHAR2(18) NOT NULL,
+    CONSTRAINT PK_Playlists_Seguidores PRIMARY KEY (id_playlist, id_usuario),
+    CONSTRAINT FK_id_playlist FOREIGN KEY (id_playlist) REFERENCES Playlists(id_playlist),
+    CONSTRAINT FK_Autor_Playlist FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
 
 CREATE TABLE Playlists_Musicas (
-    Id_Playlist VARCHAR2(18) NOT NULL,
-    Id_Musica VARCHAR2(18) NOT NULL,
-    CONSTRAINT PK_Playlists_Musicas PRIMARY KEY (Id_Playlist, Id_Musica),
-    CONSTRAINT FK_Musica_Playlist FOREIGN KEY (Id_Musica) REFERENCES Musicas(Id_Musica),
-    CONSTRAINT FK_Playlist_Musica FOREIGN KEY (Id_Playlist) REFERENCES Playlists(Id_Playlist)
+    id_playlist VARCHAR2(18) NOT NULL,
+    id_musica VARCHAR2(18) NOT NULL,
+    CONSTRAINT PK_Playlists_Musicas PRIMARY KEY (id_playlist, id_musica),
+    CONSTRAINT FK_Musica_Playlist FOREIGN KEY (id_musica) REFERENCES Musicas(id_musica),
+    CONSTRAINT FK_Playlist_Musica FOREIGN KEY (id_playlist) REFERENCES Playlists(id_playlist)
 );
 
 CREATE TABLE Usuarios_Playlists (
-    Id_Usuario VARCHAR2(18) NOT NULL,
-    Id_Playlist VARCHAR2(18) NOT NULL,
+    id_usuario VARCHAR2(18) NOT NULL,
+    id_playlist VARCHAR2(18) NOT NULL,
     Colaborador VARCHAR2(1),
-    CONSTRAINT PK_Usuario_Playlist PRIMARY KEY (Id_Usuario, Id_Playlist),
-    CONSTRAINT FK_Usuario_Playlist_Vinculo FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario),
-    CONSTRAINT FK_Playlist_Usuario_Vinculo FOREIGN KEY (Id_Playlist) REFERENCES Playlists(Id_Playlist)
+    CONSTRAINT PK_Usuario_Playlist PRIMARY KEY (id_usuario, id_playlist),
+    CONSTRAINT FK_Usuario_Playlist_Vinculo FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
+    CONSTRAINT FK_Playlist_Usuario_Vinculo FOREIGN KEY (id_playlist) REFERENCES Playlists(id_playlist)
 );
 
 CREATE TABLE Artistas_Seguidores (
-    Id_Usuario VARCHAR2(18) NOT NULL,
-    Id_Artista VARCHAR2(18) NOT NULL,
-    CONSTRAINT PK_Artistas_Seguidores PRIMARY KEY (Id_Usuario, Id_Artista),
-    CONSTRAINT FK_Seguindo_Artista FOREIGN KEY (Id_Artista) REFERENCES Artistas(Id_Artista),
-    CONSTRAINT FK_Usuario_Seguindo_Artista FOREIGN KEY (Id_Usuario) REFERENCES Usuarios(Id_Usuario)
+    id_usuario VARCHAR2(18) NOT NULL,
+    id_artista VARCHAR2(18) NOT NULL,
+    CONSTRAINT PK_Artistas_Seguidores PRIMARY KEY (id_usuario, id_artista),
+    CONSTRAINT FK_Seguindo_Artista FOREIGN KEY (id_artista) REFERENCES Artistas(id_artista),
+    CONSTRAINT FK_Usuario_Seguindo_Artista FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
 
+CREATE TABLE Seguindo_Seguidores (
+    id_seguidor VARCHAR2(18) NOT NULL,
+    id_seguindo VARCHAR2(18) NOT NULL,
+    CONSTRAINT PK_Seguidores PRIMARY KEY (id_seguidor, id_seguindo),
+    CONSTRAINT FK_Seguindo FOREIGN KEY (id_seguidor) REFERENCES Usuarios(id_usuario),
+    CONSTRAINT FK_Seguidor FOREIGN KEY (id_seguindo) REFERENCES Usuarios(id_usuario)
+);

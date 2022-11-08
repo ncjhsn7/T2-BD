@@ -29,8 +29,8 @@ INSERT INTO Musicas VALUES ('JOYTIME#3', 'Numb', 'Eletronica', 120, 356939, 'JOY
 INSERT INTO Musicas VALUES ('JOYTIME#4', 'Silence', 'Eletronica', 120, 24252, 'JOYTIME', '20-OCT-17');
 INSERT INTO Musicas VALUES ('GRDT#1', '21 Questions', 'Rap', 120, 645634, 'GRDT', '4-MAR-2003');
 INSERT INTO Musicas VALUES ('GRDT#2', 'Many Men', 'Rap', 120, 9058021, 'GRDT', '6-MAY-2003');
-INSERT INTO Musicas VALUES ('BTS#1', 'Dynamite', 'KPOP', 120, 31, 'BE', '21-AUG-2020');
-INSERT INTO Musicas VALUES ('BTS#2', 'Butter', 'KPOP', 120, 162423, 'BE', '21-MAY-2021');
+INSERT INTO Musicas VALUES ('BTS#1', 'Dynamite', 'KPOP', 120, 3123131, 'BE', '21-AUG-2020');
+INSERT INTO Musicas VALUES ('BTS#2', 'Butter', 'KPOP', 120, 162123423, 'BE', '21-MAY-2021');
 INSERT INTO Musicas VALUES ('BTS#3', 'Bad Decisions', 'KPOP', 120, 99999999, 'BE', '3-AUG-2022');
 INSERT INTO Musicas VALUES ('DUALIPA#1', 'One Kiss', 'Pop', 120, 2352, 'FUTURENOSTALGIA', '6-APR-2018');
 INSERT INTO Musicas VALUES ('DUALIPA#2', 'Dont Start Now', 'Pop', 120, 234423, 'FUTURENOSTALGIA', '1-NOV-2019');
