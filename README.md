@@ -34,7 +34,7 @@ Utilizada para vincular músicas de uma playlist que une as tabelas `Playlists` 
 Utilizada para identificar quais usuários seguem uma playlist que une as tabelas `Playlists` e `Usuarios` com as colunas `id_playlist` e `id_usuario` (FK/PK).
 
 ## Seguindo_Seguidores
-Utilizada para identificar quais usuários seguem uns aos outros que auto vincula a tabela `Usuarios` com as colunas `id_playlist` e `id_usuario` (FK/PK).
+Utilizada para identificar quais usuários seguem uns aos outros que auto vincula a tabela `Usuarios` com as colunas `id_usuario` e `id_usuario` (FK/PK).
 
 ## Pré configuração do BD
 primeiro executar os comandos que estão no arquivo `CreateTables.sql` e depois preencher os dados das tabelas com o arquivo `LoadData.sql`.
