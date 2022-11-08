@@ -5,24 +5,24 @@ O intuito do trabalho é construir um banco de dados simulando uma versão mais 
 
 # Tabelas primárias
 ## Artistas
-Utilizada para salvar os produtores de músicas. Contém as colunas `Id_Artistas` (PK) e `Nome`. Sem nenhuma chave estrangeira.
+Utilizada para salvar os produtores de músicas. Contém as colunas `id_artistas` (PK) e `nome`. Sem nenhuma chave estrangeira.
 
 ## Usuarios
-São as pessoas que utilizam a plataforma. Contém as colunas `Id_Usuario` (PK) e `Nome`. Sem nenhuma chave estrangeira.
+São as pessoas que utilizam a plataforma. Contém as colunas `id_usuario` (PK) e `nome`. Sem nenhuma chave estrangeira.
 
 ## Albuns
-Servem para fazer uma coletânea de músicas de um artista. Contém as colunas `Id_Album` (PK), `Nome` e `Data_Lancamento`.
+Servem para fazer uma coletânea de músicas de um artista. Contém as colunas `id_album` (PK), `nome` e `data_lancamento`.
 
 ## Musicas
-Praticamente a tabela principal do trabalho. Nesta tabela está contida as informações de `Id_Musica` (PK), `Nome`, `Genero`, `Duracao`,
-`Vezes_Reproduzida`, `Id_Album` (FK) para a tabela `Albuns`, `Data_Lancamento`.
+Praticamente a tabela principal do trabalho. Nesta tabela está contida as informações de `id_musica` (PK), `nome`, `genero`, `duracao`,
+`vezes_reproduzida`, `id_album` (FK) para a tabela `albuns`, `data_lancamento`.
 
 ## Playlists
-Tabela para identificar um conjunto de músicas de um usuário. Contém as informações `Id_Playlist` (PK), `Id_Usuario` (FK) para a tabela `Usuarios` e uma coluna `Publica` para identificar se essa tabela é visivel para outros usuários. Na coluna `Publica` não foi feito nenhuma validação para saber se ela é publica ou privada na hora de definir os seguidores dessa playlist.
+Tabela para identificar um conjunto de músicas de um usuário. Contém as informações `id_playlist` (PK), `id_usuario` (FK) para a tabela `Usuarios` e uma coluna `publica` para identificar se essa tabela é visivel para outros usuários. Na coluna `publica` não foi feito nenhuma validação para saber se ela é publica ou privada na hora de definir os seguidores dessa playlist.
 
 # Tabelas de Relacionamento
 ## Musicas_Artistas
-Utilizada para definir de quem é uma determinada música, 
+Utilizada para definir de quem é uma determinada música, e une as tabelas `Musicas` e `Artistas` com as colunas `id_musica` e `id_artista`
 
 
 ## Pré configuração do BD
