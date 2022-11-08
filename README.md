@@ -25,7 +25,7 @@ Tabela para identificar um conjunto de músicas de um usuário. Contém as infor
 Utilizada para definir de quem é uma determinada música e une as tabelas `Musicas` e `Artistas` com as colunas `id_musica` (FK/PK) e `id_artista` (FK/PK).
 
 ## Usuarios_Playlists
-Utilizada para vincular uma playlist ao um usuário e verificar se ele é dono, colaborador ou não possui vínculo com ela. Possui duas colunas como chave primária e estrangeira ao mesmo tempo da tabela `id_usuario` e `id_playlist` e uma coluna de colaborador/dono `colaborador`.
+Utilizada para vincular uma playlist a um usuário e verificar se ele é dono, colaborador ou não possui vínculo com ela. Possui duas colunas como chave primária e estrangeira ao mesmo tempo da tabela `id_usuario` e `id_playlist` e uma coluna de colaborador/dono `colaborador`.
 Na coluna `colaborador` possui valores definidos como 0 = sem nenhum vinculo, 1 = colaborador, 2 = dono.
 
 ## Playlists_Musicas
@@ -35,7 +35,7 @@ Utilizada para vincular músicas de uma playlist que une as tabelas `Playlists` 
 Utilizada para identificar quais usuários seguem uma playlist que une as tabelas `Playlists` e `Usuarios` com as colunas `id_playlist` e `id_usuario` (FK/PK).
 
 ## Seguindo_Seguidores
-Utilizada para identificar quais usuários seguem uns aos outros que auto vincula a tabela `Usuarios` com as colunas `id_usuario` e `id_usuario` (FK/PK).
+Utilizada para identificar quais usuários seguem uns aos outros, que auto vincula a tabela `Usuarios` com as colunas `id_usuario` e `id_usuario` (FK/PK).
 
 ## Pré configuração do BD
 primeiro executar os comandos que estão no arquivo `CreateTables.sql` e depois preencher os dados das tabelas com o arquivo `LoadData.sql`.
